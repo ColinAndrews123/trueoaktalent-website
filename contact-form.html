@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Consultation - True Oak Talent</title>
+  <meta name="description" content="Schedule your free 30-minute remote staff hiring consultation with True Oak Talent. Discuss your hiring needs and find the perfect remote team member.">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Book a Consultation - True Oak Talent">
+  <meta property="og:description" content="Schedule your free 30-minute remote staff hiring consultation with True Oak Talent.">
+  <meta property="og:url" content="https://trueoaktalent.com/contact-form.html">
+  
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Book a Consultation - True Oak Talent">
+  <meta name="twitter:description" content="Schedule your free 30-minute remote staff hiring consultation.">
+  
+  <!-- Canonical Tag -->
+  <link rel="canonical" href="https://trueoaktalent.com/contact-form.html">
+  
+  <!-- Import fonts via link tag -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  
+  <style>
+    :root {
+      --navy-dark: #0a1628;
+      --navy: #1B3A6B;
+      --navy-mid: #2d4f8d;
+      --navy-light: #5a7fa6;
+      --orange: #E8642A;
+      --orange-dark: #d14a0f;
+      --white: #ffffff;
+      --bg: #f9f9f9;
+      --bg-soft: #f5f5f5;
+      --bg-card: #ffffff;
+      --gray: #666666;
+      --gray-light: #999999;
+      --gray-dark: #333333;
+      --dark: #1a1a1a;
+      --border: #e0e0e0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+      color: var(--gray);
+      background: var(--white);
+    }
+
+    /* NAV - navy background */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: auto;
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 44px;
+      overflow: visible;
+      background: rgba(27, 58, 107, 0.98);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-logo {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      overflow: visible;
+    }
+
+    .nav-logo img {
+      height: 144px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      margin-top: 5px;
+      max-width: 600px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .nav-cta {
+      background: var(--orange) !important;
+      color: var(--white) !important;
+      padding: 10px 20px !important;
+      border-radius: 2px;
+    }
+
+    .nav-cta:hover {
+      background: var(--orange-dark) !important;
+    }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 1px;
+    }
+
+    /* MAIN CONTENT */
+    main {
+      padding-top: 180px;
+      min-height: 100vh;
+      padding-bottom: 60px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 44px;
+    }
+
+    .form-section {
+      background: var(--white);
+      padding: 60px 0;
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+
+    .form-header p {
+      font-size: clamp(14px, 1.8vw, 18px);
+      color: var(--gray);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    .accent-line {
+      width: 44px;
+      height: 3px;
+      background: var(--orange);
+      margin: 18px auto 32px;
+      border-radius: 2px;
+    }
+
+    .form-card {
+      max-width: 700px;
+      margin: 0 auto;
+      background: var(--white);
+      padding: 60px 48px;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-instruction {
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    .form-instruction p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--gray);
+      font-size: clamp(16px, 2vw, 20px);
+      line-height: 1.75;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .ghl-form-container {
+      width: 100%;
+    }
+
+    .ghl-form-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 4px;
+      min-height: 650px;
+    }
+
+    /* FOOTER - navy */
+    footer {
+      background: var(--navy-dark);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 60px 44px 36px;
+      margin-top: 60px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 52px;
+      margin-bottom: 48px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer-logo img {
+      height: 144px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .footer-heading {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      font-size: 17px;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--orange);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer-copy {
+      color: rgba(255, 255, 255, 0.3);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .container {
+        padding: 0 24px;
+      }
+
+      nav {
+        padding: 0 20px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .form-card {
+        padding: 40px 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 0 24px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 24px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 16px 24px;
+        min-height: 130px;
+      }
+
+      .nav-logo img {
+        height: 116px;
+        max-width: 480px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-hamburger {
+        display: flex;
+      }
+
+      main {
+        padding-top: 160px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .form-section {
+        padding: 40px 0;
+      }
+
+      .form-card {
+        padding: 30px 20px;
+      }
+
+      .ghl-form-container iframe {
+        min-height: 700px;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        padding: 14px 20px;
+        min-height: 120px;
+      }
+
+      .nav-logo img {
+        height: 105px;
+        max-width: 420px;
+      }
+
+      main {
+        padding-top: 140px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .form-section {
+        padding: 30px 0;
+      }
+
+      .form-card {
+        padding: 24px 16px;
+      }
+
+      .form-header {
+        margin-bottom: 36px;
+      }
+
+      .form-instruction {
+        margin-bottom: 36px;
+      }
+
+      .form-instruction p {
+        font-size: 18px;
+      }
+
+      .ghl-form-container iframe {
+        min-height: 750px;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .footer-grid {
+        padding: 0 16px;
+      }
+
+      .footer-bottom {
+        padding: 0 16px;
+      }
+    }
+
+    /* Mobile Menu Active State */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        top: 150px;
+        left: 0;
+        right: 0;
+        background: #1B3A6B;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        z-index: 99;
+        display: flex !important;
+      }
+
+      .nav-links.active {
+        transform: translateX(0);
+      }
+
+      .nav-hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .nav-hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .nav-hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+      }
+    }
+
+    /* Hamburger Z-Index Fix */
+    .nav-hamburger {
+      position: relative;
+      z-index: 1001 !important;
+      cursor: pointer !important;
+      pointer-events: auto !important;
+    }
+
+    nav {
+      position: fixed !important;
+      z-index: 1000 !important;
+    }
+  </style>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAACgnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAgACADASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAQAYIAwf/xAApEAABAwMCBQQDAQAAAAAAAAABAgMEAAUREiEGExVBUQcUMYEiMnGR/8QAGAEAAwEBAAAAAAAAAAAAAAAAAAIFAQP/xAAhEQACAgEDBQEAAAAAAAAAAAABAwACERITMSFhcbHBkf/aAAwDAQACEQMRAD8A4WBRNugTrjIEa3wpMx8/DbDSnFH6AzQ3aq79LINh4O4QgQrFLSLrdW2lLe5mfdyFBKdCVhSBhHMCw3uSNWnUQqrznbY4kpa9Zklz4Uu3ylxZ8R+LIR+zTzZQtP8AQdxWBxiqy9T4Fm444QuXVQ11K2tvLZnIU0Ay82CFta9adeS3kpIykOD8QcVJprUt3BxBlNBmsTlF9PP2b3z/AJTbw+5Is82JfLfHQFRz7hmQu3FxKSkkpWNQKTuhW/YpPjNJvaio10ucVosxrjMYaKdJQ2+pKSMk4wD8ZUo/Z80rkWZxcj8+gzol9VjBoD5z8IjVf+sXBUi5XuCth14rkSVG2raQXCoBSiEgJGVHBOPnHmlGallMhYYWFt7YUARnbwa1l3W6S2y3LuUx9BzlLr6lA5IJ2J7lIP0PFCDGnwaFJtQ5Nie3THqK11b1wKAd+ufc/9k=">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="https://res.cloudinary.com/drj0xsltf/image/upload/v1728906195/TOT_Logo_White_FINAL_frvjrq.svg" alt="True Oak Talent Logo" onerror="this.style.display='none'">
+    <span style="color: white; font-family: 'Cinzel', serif; font-weight: 700; font-size: 14px; text-transform: uppercase; display: none;" class="logo-fallback">True Oak Talent</span>
+  </a>
+  <div class="nav-hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#why-us">Why Us</a></li>
+    <li><a href="index.html#how">How It Works</a></li>
+    <li><a href="index.html#roles">Roles</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+  </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main>
+  <section class="form-section">
+    <div class="container">
+      <!-- FORM HEADER -->
+      <div class="form-header">
+        <h1>30-Minute Remote Staff Consultation</h1>
+        <div class="accent-line"></div>
+        <p>Join us on a video Google Meet (desktop recommended) to discuss your hiring goals, review our process, and get your questions answered. We will map out your specific role and determine the best next steps to find your ideal remote staff member.</p>
+      </div>
+
+      <!-- FORM CARD -->
+      <div class="form-card">
+        <!-- FORM INSTRUCTION -->
+        <div class="form-instruction">
+          <p>Fill out this form to book a 30 minute remote staff hiring consultation.</p>
+        </div>
+
+        <!-- GHL FORM -->
+        <div class="ghl-form-container">
+          <iframe src="https://api.leadconnectorhq.com/widget/form/8q4TYZLi0uGyaCuXv0VT" style="width:100%;height:100%;border:none;border-radius:4px;min-height:650px;" id="inline-8q4TYZLi0uGyaCuXv0VT" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="WEBSITE LEAD FORM " data-height="622" data-layout-iframe-id="inline-8q4TYZLi0uGyaCuXv0VT" data-form-id="8q4TYZLi0uGyaCuXv0VT" title="WEBSITE LEAD FORM "></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" style="text-decoration:none;">
+        <img src="https://res.cloudinary.com/drj0xsltf/image/upload/v1728906195/TOT_Logo_White_FINAL_frvjrq.svg" alt="True Oak Talent Logo" class="footer-logo">
+      </a>
+      <p style="color:rgba(255,255,255,0.5); font-size:15px; margin-top:12px;">Connecting world-class remote talent with US businesses since 2023.</p>
+    </div>
+    <div>
+      <h3 class="footer-heading">Product</h3>
+      <div class="footer-links">
+        <p><a href="index.html#roles">Roles We Fill</a></p>
+        <p><a href="index.html#how">How It Works</a></p>
+        <p><a href="index.html#faq">FAQ</a></p>
+        <p><a href="contact-form.html">Contact Us</a></p>
+      </div>
+    </div>
+    <div>
+      <h3 class="footer-heading">Legal</h3>
+      <ul class="footer-links" style="list-style:none; padding:0; margin:0;">
+        <li><a href="/privacy">PRIVACY POLICY</a></li>
+        <li><a href="/terms">TERMS AND CONDITIONS</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 True Oak Talent. A DBA of True Oak Ventures LLC. Delaware LLC.</p>
+  </div>
+</footer>
+
+<script>
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+  // Logo fallback if image fails
+  const navImg = document.querySelector('.nav-logo img');
+  const logoFallback = document.querySelector('.logo-fallback');
+  
+  if (navImg) {
+    navImg.addEventListener('error', function() {
+      navImg.style.display = 'none';
+      if (logoFallback) {
+        logoFallback.style.display = 'block';
+      }
+    });
+  }
+
+  const hamburger = document.querySelector('.nav-hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close the menu when a link is clicked
+    const links = navLinks.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  }
+});
+</script>
+
+<!-- GHL Form Embed Script - Deferred -->
+<script defer src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+</body>
+</html>
