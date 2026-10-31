@@ -386,18 +386,40 @@
 
 <script defer src="js/main.js"></script>
 
-
-<!-- Lead Connector Chat Widget - Deferred -->
-<script defer src="https://widgets.leadconnectorhq.com/loader.js" 
-  data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
-  data-widget-id="6a139bbeb47a945bd734c150">
+<!-- Booking buttons: land on the booking section, just below the fixed menu bar.
+     Photos load while the page scrolls and push it down, so the position is corrected once they have. -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.getElementById('contact-form');
+  if (!target) return;
+  function go(smooth) {
+    var nav = document.querySelector('nav');
+    var navBottom = nav ? Math.max(0, nav.getBoundingClientRect().bottom) : 0;
+    var y = target.getBoundingClientRect().top + window.pageYOffset - navBottom;
+    window.scrollTo({ top: y, behavior: smooth ? 'smooth' : 'auto' });
+  }
+  var links = document.querySelectorAll('a[href="#contact-form"]');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function (e) {
+      e.preventDefault();
+      var imgs = document.querySelectorAll('img[loading="lazy"]');
+      for (var j = 0; j < imgs.length; j++) { imgs[j].loading = 'eager'; }
+      go(true);
+      setTimeout(function () { go(true); }, 900);
+      if (history.replaceState) { history.replaceState(null, '', '#contact-form'); }
+    });
+  }
+});
 </script>
 
 <!-- Lead Connector Chat Widget - Deferred -->
-<script defer src="https://widgets.leadconnectorhq.com/loader.js" 
-  data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
+<script defer src="https://widgets.leadconnectorhq.com/loader.js"
+  data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
   data-widget-id="6a139bbeb47a945bd734c150">
 </script>
+
+<!-- GHL Form Embed Script - Deferred -->
+<script defer src="https://link.msgsndr.com/js/form_embed.js"></script>
 
 </body>
 </html>
