@@ -430,13 +430,19 @@ section[id], div[id] { scroll-margin-top: 170px; }
 }
 
 @media (max-width: 768px) {
-  html { scroll-padding-top: 170px; }
-  section[id], div[id] { scroll-margin-top: 170px; }
+  html { scroll-padding-top: 130px; }
+  section[id], div[id] { scroll-margin-top: 130px; }
 }
 
 @media (max-width: 480px) {
-  html { scroll-padding-top: 170px; }
-  section[id], div[id] { scroll-margin-top: 170px; }
+  html { scroll-padding-top: 120px; }
+  section[id], div[id] { scroll-margin-top: 120px; }
+}
+}
+.faq-item.open .faq-a {
+  max-height: 600px;
+  padding-top: 12px;
+  padding-bottom: 24px;
 }
 
 @keyframes simpleFadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -509,10 +515,14 @@ nav { background: #1B3A6B !important; min-height: 150px; padding: 20px 44px; pos
 .faq-a { 
   max-height: 0; 
   overflow: hidden; 
-  transition: max-height 0.3s ease;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0;
+  display: block !important;
 }
 .faq-item.open .faq-a {
+  max-height: 600px;
   padding-top: 12px;
+  padding-bottom: 24px;
 }
 
 footer {
@@ -697,5 +707,7 @@ nav {
   .proof-grid { grid-template-columns: 1fr; }
 }
 
+
 /* Prevent sideways scroll on phones */
 html, body { overflow-x: hidden; }
+.faq-q-icon { display: none; }
