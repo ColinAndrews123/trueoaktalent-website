@@ -351,7 +351,6 @@
       <div id="booking-calendar" style="width: 100%;">
         <div data-tf-widget="DejVSt8G" data-tf-inline-on-mobile data-tf-opacity="100" data-tf-hidden="fbp=,fbc=,event_id=" data-tf-transitive-search-params data-tf-redirect-target="_top" style="width:100%;height:600px;"></div>
         <script async src="https://embed.typeform.com/next/embed.js"></script>
-        <noscript><iframe src="https://api.leadconnectorhq.com/widget/booking/NKIg7LXyZ149CfSM5J7n" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="NKIg7LXyZ149CfSM5J7n_1779064890360"></iframe></noscript>
       </div>
     </div>
   </div>
@@ -387,10 +386,35 @@
 
 <script defer src="js/main.js"></script>
 
+<!-- Booking buttons: land on the booking section, just below the fixed menu bar.
+     Photos load while the page scrolls and push it down, so the position is corrected once they have. -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.getElementById('contact-form');
+  if (!target) return;
+  function go(smooth) {
+    var nav = document.querySelector('nav');
+    var navBottom = nav ? Math.max(0, nav.getBoundingClientRect().bottom) : 0;
+    var y = target.getBoundingClientRect().top + window.pageYOffset - navBottom;
+    window.scrollTo({ top: y, behavior: smooth ? 'smooth' : 'auto' });
+  }
+  var links = document.querySelectorAll('a[href="#contact-form"]');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function (e) {
+      e.preventDefault();
+      var imgs = document.querySelectorAll('img[loading="lazy"]');
+      for (var j = 0; j < imgs.length; j++) { imgs[j].loading = 'eager'; }
+      go(true);
+      setTimeout(function () { go(true); }, 900);
+      if (history.replaceState) { history.replaceState(null, '', '#contact-form'); }
+    });
+  }
+});
+</script>
 
 <!-- Lead Connector Chat Widget - Deferred -->
-<script defer src="https://widgets.leadconnectorhq.com/loader.js" 
-  data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
+<script defer src="https://widgets.leadconnectorhq.com/loader.js"
+  data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
   data-widget-id="6a139bbeb47a945bd734c150">
 </script>
 
